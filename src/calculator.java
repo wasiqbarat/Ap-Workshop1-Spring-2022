@@ -6,9 +6,9 @@ public class calculator {
 
         System.out.println("Welcome to Calculator!");
         System.out.println("Enter first number:");
-        int firstNum = scanner.nextInt();
+        float firstNum = scanner.nextInt();
         System.out.println("Enter second num:");
-        int secondNum = scanner.nextInt();
+        float secondNum = scanner.nextInt();
         if (secondNum == 0){
             System.out.println("enter non-zero number!!!!");
             return;
@@ -16,10 +16,18 @@ public class calculator {
         System.out.println("Which operation do you want to perform: (    +  -  *  /    )");
         char operator = scanner.next().charAt(0);
         if (operator == '+' || operator == '-' || operator == '*' || operator == '/'){
-            System.out.println("your choice is:" + operator);
         }else {
             System.out.println("please enter valid operator!");
             return;
         }
+        float result = 0;
+        switch ( operator ){
+            case '+' -> result = firstNum + secondNum;
+            case '-' -> result = firstNum - secondNum;
+            case '*' -> result = firstNum * secondNum;
+            case '/' -> result = firstNum / secondNum;
+        }
+
+
     }
 }
