@@ -27,7 +27,6 @@ public class calculator {
             case '*' -> result = firstNum * secondNum;
             case '/' -> result = firstNum / secondNum;
         }
-
-
+        System.out.println(result);
     }
 }
